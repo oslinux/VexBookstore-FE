@@ -1,0 +1,34 @@
+VexDev\Bundle\BookstoreBundle\Entity\Category:
+    type: entity
+    table: category
+    fields:
+        cid:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        name:
+            type: string
+            length: 100
+            fixed: false
+            nullable: true
+    manyToMany:
+        isbn:
+            targetEntity: Book
+            cascade: {  }
+            mappedBy: null
+            inversedBy: cid
+            joinTable:
+                name: cabo
+                joinColumns:
+                    -
+                        name: cid
+                        referencedColumnName: cid
+                inverseJoinColumns:
+                    -
+                        name: isbn
+                        referencedColumnName: isbn
+            orderBy: null
+    lifecycleCallbacks: {  }

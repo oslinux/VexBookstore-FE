@@ -1,0 +1,24 @@
+VexDev\Bundle\BookstoreBundle\Entity\Admin:
+    type: entity
+    table: admin
+    fields:
+        email:
+            id: true
+            type: string
+            length: 255
+            fixed: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        password:
+            type: string
+            length: 100
+            fixed: false
+            nullable: true
+        displayName:
+            type: string
+            length: 100
+            fixed: false
+            nullable: true
+            column: display_name
+    lifecycleCallbacks: {  }

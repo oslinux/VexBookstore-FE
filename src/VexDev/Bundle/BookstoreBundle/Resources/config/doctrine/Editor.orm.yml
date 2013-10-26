@@ -1,0 +1,34 @@
+VexDev\Bundle\BookstoreBundle\Entity\Editor:
+    type: entity
+    table: editor
+    fields:
+        eid:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        name:
+            type: string
+            length: 100
+            fixed: false
+            nullable: true
+    manyToMany:
+        isbn:
+            targetEntity: Book
+            cascade: {  }
+            mappedBy: null
+            inversedBy: eid
+            joinTable:
+                name: edbo
+                joinColumns:
+                    -
+                        name: eid
+                        referencedColumnName: eid
+                inverseJoinColumns:
+                    -
+                        name: isbn
+                        referencedColumnName: isbn
+            orderBy: null
+    lifecycleCallbacks: {  }
