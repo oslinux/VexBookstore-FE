@@ -1,0 +1,97 @@
+<?php
+
+namespace VexDev\Bundle\BookstoreBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Book
+ *
+ * @ORM\Table(name="book")
+ * @ORM\Entity
+ */
+class Book
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="isbn", type="string", length=20, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $isbn;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="name", type="string", length=255, nullable=true)
+     */
+    private $name;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="description", type="text", nullable=true)
+     */
+    private $description;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="url", type="string", length=255, nullable=true)
+     */
+    private $url;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="price", type="decimal", nullable=true)
+     */
+    private $price;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="pages", type="integer", nullable=true)
+     */
+    private $pages;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="edition", type="integer", nullable=true)
+     */
+    private $edition;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\ManyToMany(targetEntity="VexDev\Bundle\BookstoreBundle\Entity\Author", mappedBy="isbn")
+     */
+    private $aid;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\ManyToMany(targetEntity="VexDev\Bundle\BookstoreBundle\Entity\Category", mappedBy="isbn")
+     */
+    private $cid;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\ManyToMany(targetEntity="VexDev\Bundle\BookstoreBundle\Entity\Editor", mappedBy="isbn")
+     */
+    private $eid;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->aid = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->cid = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->eid = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+    
+}

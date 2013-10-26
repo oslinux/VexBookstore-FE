@@ -1,0 +1,61 @@
+<?php
+
+namespace VexDev\Bundle\BookstoreBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Author
+ *
+ * @ORM\Table(name="author")
+ * @ORM\Entity
+ */
+class Author
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="aid", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $aid;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="name", type="string", length=100, nullable=true)
+     */
+    private $name;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="surname", type="string", length=100, nullable=true)
+     */
+    private $surname;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\ManyToMany(targetEntity="VexDev\Bundle\BookstoreBundle\Entity\Book", inversedBy="aid")
+     * @ORM\JoinTable(name="aubo",
+     *   joinColumns={
+     *     @ORM\JoinColumn(name="aid", referencedColumnName="aid")
+     *   },
+     *   inverseJoinColumns={
+     *     @ORM\JoinColumn(name="isbn", referencedColumnName="isbn")
+     *   }
+     * )
+     */
+    private $isbn;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->isbn = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+    
+}
