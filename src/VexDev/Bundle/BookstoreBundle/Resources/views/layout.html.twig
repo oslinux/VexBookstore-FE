@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple bookstore written in PHP using Symfony. By Luca Vitucci">
+    <meta name="author" content="http://www.vexdev.com">
+
+    <title>{% block title %}Vex's Bookstore{% endblock %}</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{ asset('bundles/vexbookstore/css/bootstrap.css') }}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{{ asset('bundles/vexbookstore/css/app.css') }}" rel="stylesheet">
+
+    {% block head %}{% endblock %}
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Static navbar -->
+    <div class="navbar navbar-default">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Vex's Bookstore</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            {% if is_granted('ROLE_USER') %}
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Our books <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Full list</a></li>
+                            <li><a href="#">By Category</a></li>
+                            <li><a href="#">By Author</a></li>
+                            <li><a href="#">By Editor</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-right" action="{{ path('logout') }}" method="get">
+                    <button type="submit" class="btn btn-default">Logout</button>
+                </form>
+                <form class="navbar-form navbar-right" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                </form>
+            {% else %}
+                <form action="{{ path('login_check') }}" class="navbar-form navbar-right" method="post">
+                    <div class="form-group">
+                        <input name="_username" type="text" class="form-control" placeholder="Email">
+                        <input name="_password" type="password" class="form-control" placeholder="Password">
+                    </div>
+                    <button type="submit" class="btn btn-default">Login</button>
+                </form>
+            {% endif %}
+        </div><!--/.nav-collapse -->
+    </div>
+
+    {% for flashMessage in app.session.flashbag.get('success') %}
+        <div  class="alert alert-success">
+            {{ flashMessage }}
+        </div>
+    {% endfor %}
+    {% for flashMessage in app.session.flashbag.get('info') %}
+        <div  class="alert alert-info">
+            {{ flashMessage }}
+        </div>
+    {% endfor %}
+    {% for flashMessage in app.session.flashbag.get('warning') %}
+        <div  class="alert alert-warning">
+            {{ flashMessage }}
+        </div>
+    {% endfor %}
+    {% for flashMessage in app.session.flashbag.get('danger') %}
+        <div  class="alert alert-danger">
+            {{ flashMessage }}
+        </div>
+    {% endfor %}
+
+    <!-- Main component for a primary marketing message or call to action -->
+    <div class="content">
+        <div class="row">
+            {% if is_granted('ROLE_USER') %}
+            <div class="col-md-2">
+                <div class="well">
+                    <ul class="nav nav-pills nav-stacked">
+                        <li class="active"><a href="#">Categories</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span> Category 1</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span> Category 2</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span> Category 3</a></li>
+                    </ul>
+                </div>
+            </div>
+            {% endif %}
+            <div class="col-md-{% if is_granted('ROLE_USER') %}10{% else %}12{% endif %}">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+
+    <footer class="panel panel-default">
+        <div class="panel-body">
+            Would you prefer the backend, maybe? <a href="/admin">Administration</a>
+        </div>
+        <div class="panel-footer">
+            Thanks for supporting our businesses. Feel free to visit
+            <a href="http://it.linkedin.com/in/vexdev">
+                <img src="http://s.c.lnkd.licdn.com/scds/common/u/img/webpromo/btn_myprofile_160x33.png" width="160" height="33" border="0" alt="View Luca Vitucci's profile on LinkedIn">
+            </a>
+        </div>
+    </footer>
+
+
+</div> <!-- /container -->
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="{{ asset('bundles/vexbookstore/js/bootstrap.min.js') }}"></script>
+{% block scripts %}{% endblock %}
+</body>
+</html>

@@ -1,1 +1,13 @@
-Hello {{ name }}!
+{% extends 'VexBookstoreBundle::layout.html.twig' %}
+
+{% block content %}
+    <!-- Main component for a primary marketing message or call to action -->
+    <div class="jumbotron">
+        <h1>Vex's Bookstore</h1>
+        <p>Welcome to the most exciting and most costly experience in web Bookstore that you will be ever able to see.</p>
+        <p>We've achieved the state of the art.</p>
+        {% if not(is_granted('ROLE_USER')) %}
+            <a class="btn btn-lg btn-primary" href="{{ path('login') }}">Login »</a>
+        {% endif %}
+    </div>
+{% endblock %}

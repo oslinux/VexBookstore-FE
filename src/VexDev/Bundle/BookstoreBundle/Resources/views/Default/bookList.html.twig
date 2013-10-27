@@ -1,0 +1,27 @@
+{% extends 'VexBookstoreBundle::layout.html.twig' %}
+
+{% block content %}
+
+    <div class="page-header">
+        <h1>Books <small>Complete listing</small></h1>
+    </div>
+
+    <div>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for book in books %}
+                <tr>
+                    <td>{{ book.name }}</td>
+                    <td>{{ book.description }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

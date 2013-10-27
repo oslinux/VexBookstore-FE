@@ -3,3 +3,11 @@ vex_bookstore:
     type:     annotation
     prefix:   /
 
+login:
+    pattern:   /login
+    defaults:  { _controller: VexBookstoreBundle:Security:login }
+login_check:
+    pattern:   /login_check
+
+logout:
+    path:   /logout

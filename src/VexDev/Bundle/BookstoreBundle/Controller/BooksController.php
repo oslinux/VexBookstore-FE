@@ -6,14 +6,17 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
-class DefaultController extends Controller
+class BooksController extends Controller
 {
     /**
-     * @Route("/")
-     * @Template("VexBookstoreBundle:Default:index.html.twig")
+     * @Route("/books")
+     * @Template("VexBookstoreBundle:Default:bookList.html.twig")
      */
     public function indexAction()
     {
-        return array('name' => 'test');
+        $repository = $this->getDoctrine()->getRepository('VexBookstoreBundle:Book');
+        $books = $repository->findAll();
+
+        return array('books' => $books);
     }
 }
