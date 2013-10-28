@@ -1,0 +1,33 @@
+{% extends 'VexBookstoreBundle::layout.html.twig' %}
+
+{% block content %}
+
+    <div class="page-header">
+        <h1>Books <small>Results for "{{ search }}"</small></h1>
+    </div>
+
+    <div>
+        {% if books %}
+            <table class="table search">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for book in books %}
+                    <tr itemscope itemtype="http://schema.org/Book">
+                        <td itemprop="name">{{ book.name }}</td>
+                        <td itemprop="description">{{ book.description }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <div class="alert alert-warning">
+                Oooops! Your search found absolutely <strong>nothing</strong>. Please try using other words.
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}
