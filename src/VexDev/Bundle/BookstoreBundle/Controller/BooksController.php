@@ -15,15 +15,17 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 class BooksController extends Controller
 {
     /**
-     * @Route("")
+     * @Route("", name="books")
      * @Template("VexBookstoreBundle:Book:list.html.twig")
      */
     public function indexAction()
     {
         $repository = $this->getDoctrine()->getRepository('VexBookstoreBundle:Book');
         $books = $repository->findAll();
+        $repository = $this->getDoctrine()->getRepository('VexBookstoreBundle:Category');
+        $categories = $repository->findAll();
 
-        return array('books' => $books);
+        return array('books' => $books, 'categories' => $categories);
     }
 
     /**
@@ -44,6 +46,22 @@ class BooksController extends Controller
         $query = $em->createNativeQuery($sql, $rsm)->setParameter(1, $q);
         $books = $query->getResult();
 
-        return array('books' => $books, 'search' => $q);
+        $repository = $this->getDoctrine()->getRepository('VexBookstoreBundle:Category');
+        $categories = $repository->findAll();
+
+        return array('books' => $books, 'search' => $q, 'categories' => $categories);
+    }
+
+    /**
+     * @Route("/book/{isbn}", name="book", defaults={"isbn" = ""})
+     * @Template("VexBookstoreBundle:Book:book.html.twig")
+     */
+    public function book($isbn)
+    {
+        $repository = $this->getDoctrine()->getRepository('VexBookstoreBundle:Book');
+        $book = $repository->find($isbn);
+        $repository = $this->getDoctrine()->getRepository('VexBookstoreBundle:Category');
+        $categories = $repository->findAll();
+        return array('book' => $book, 'categories' => $categories);
     }
 }

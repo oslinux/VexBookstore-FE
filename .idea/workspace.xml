@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fba5ced0-5006-4fc4-81ba-3e35bb663289" name="Default" comment="Created BookstoreBundle">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/VexDev/Bundle/BookstoreBundle/Resources/views/Book/book.html.twig" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/VexDev/Bundle/BookstoreBundle/Resources/views/Book/search.html.twig" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/VexDev/Bundle/BookstoreBundle/Resources/views/Default/bookList.html.twig" afterPath="$PROJECT_DIR$/src/VexDev/Bundle/BookstoreBundle/Resources/views/Book/list.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/VexDev/Bundle/BookstoreBundle/Controller/BooksController.php" afterPath="$PROJECT_DIR$/src/VexDev/Bundle/BookstoreBundle/Controller/BooksController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/VexDev/Bundle/BookstoreBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/VexDev/Bundle/BookstoreBundle/Controller/DefaultController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/VexDev/Bundle/BookstoreBundle/Resources/views/layout.html.twig" afterPath="$PROJECT_DIR$/src/VexDev/Bundle/BookstoreBundle/Resources/views/layout.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/VexDev/Bundle/BookstoreBundle/Resources/views/Book/list.html.twig" afterPath="$PROJECT_DIR$/src/VexDev/Bundle/BookstoreBundle/Resources/views/Book/list.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/VexDev/Bundle/BookstoreBundle/Resources/views/Book/search.html.twig" afterPath="$PROJECT_DIR$/src/VexDev/Bundle/BookstoreBundle/Resources/views/Book/search.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Symfony.iws" />
@@ -35,29 +37,7 @@
     <favorites_list name="Symfony" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="BooksController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/VexDev/Bundle/BookstoreBundle/Controller/BooksController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="54" selection-start="1650" selection-end="1650" vertical-scroll-proportion="-22.791666" vertical-offset="143" max-vertical-offset="825">
-              <folding>
-                <element signature="e#60#100#0" expanded="true" />
-                <marker date="1382989693000" expanded="true" signature="1214:1352" placeholder="SELECT *, MA..book..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="search.html.twig" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/VexDev/Bundle/BookstoreBundle/Resources/views/Book/search.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="49" selection-start="670" selection-end="670" vertical-scroll-proportion="0.4846154" vertical-offset="0" max-vertical-offset="650">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -76,22 +56,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/AppKernel.php" />
-        <option value="$PROJECT_DIR$/app/config/routing_dev.yml" />
         <option value="$PROJECT_DIR$/src/VexDev/Bundle/BookstoreBundle/Controller/WelcomeController.php" />
-        <option value="$PROJECT_DIR$/web/bundles/vexbookstore/css/app.css" />
         <option value="$PROJECT_DIR$/src/VexDev/Bundle/BookstoreBundle/Resources/views/layout_form.html.twig" />
         <option value="$PROJECT_DIR$/src/VexDev/Bundle/BookstoreBundle/Resources/views/Default/login.html.twig" />
         <option value="$PROJECT_DIR$/src/VexDev/Bundle/BookstoreBundle/Entity/User.php" />
         <option value="$PROJECT_DIR$/src/VexDev/Bundle/BookstoreBundle/Controller/SecurityController.php" />
-        <option value="$PROJECT_DIR$/src/VexDev/Bundle/BookstoreBundle/Controller/DefaultController.php" />
         <option value="$PROJECT_DIR$/app/config/routing.yml" />
         <option value="$PROJECT_DIR$/app/config/security.yml" />
         <option value="$PROJECT_DIR$/src/VexDev/Bundle/BookstoreBundle/Resources/views/Default/index.html.twig" />
         <option value="$PROJECT_DIR$/src/VexDev/Bundle/BookstoreBundle/Resources/views/Default/bookList.html.twig" />
-        <option value="$PROJECT_DIR$/src/VexDev/Bundle/BookstoreBundle/Controller/BooksController.php" />
-        <option value="$PROJECT_DIR$/src/VexDev/Bundle/BookstoreBundle/Resources/views/layout.html.twig" />
+        <option value="$PROJECT_DIR$/web/bundles/vexbookstore/css/app.css" />
         <option value="$PROJECT_DIR$/src/VexDev/Bundle/BookstoreBundle/Resources/views/Book/search.html.twig" />
+        <option value="$PROJECT_DIR$/src/VexDev/Bundle/BookstoreBundle/Resources/views/Book/book.html.twig" />
+        <option value="$PROJECT_DIR$/src/VexDev/Bundle/BookstoreBundle/Resources/views/Book/list.html.twig" />
+        <option value="$PROJECT_DIR$/src/VexDev/Bundle/BookstoreBundle/Controller/BooksController.php" />
+        <option value="$PROJECT_DIR$/src/VexDev/Bundle/BookstoreBundle/Controller/DefaultController.php" />
+        <option value="$PROJECT_DIR$/src/VexDev/Bundle/BookstoreBundle/Resources/views/layout.html.twig" />
       </list>
     </option>
   </component>
@@ -141,6 +121,86 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Symfony" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Symfony" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Symfony" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Symfony" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Symfony" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bundles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vexbookstore" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Symfony" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Symfony" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bundles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vexbookstore" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Symfony" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Symfony" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bundles" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -350,6 +410,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Entity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Symfony" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Symfony" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VexDev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BookstoreBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -481,7 +571,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -494,7 +584,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25931928" sideWeight="0.65954417" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25931928" sideWeight="0.65954417" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -541,38 +631,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/VexDev/Bundle/BookstoreBundle/Controller/SecurityController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="45" selection-start="801" selection-end="833" vertical-scroll-proportion="0.5769231" vertical-offset="0" max-vertical-offset="650" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/VexDev/Bundle/BookstoreBundle/Resources/views/Default/login.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="29" selection-start="107" selection-end="142" vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="255" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/VexDev/Bundle/BookstoreBundle/Controller/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="36" selection-start="0" selection-end="473" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="375" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="25" selection-start="837" selection-end="837" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/VexDev/Bundle/BookstoreBundle/Entity/Book.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="298" column="33" selection-start="5378" selection-end="5391" vertical-scroll-proportion="0.69076926" vertical-offset="4021" max-vertical-offset="5235" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/VexDev/Bundle/BookstoreBundle/Resources/views/Book/list.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="529" selection-end="529" vertical-scroll-proportion="-13.125" vertical-offset="0" max-vertical-offset="480">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="651">
@@ -615,33 +673,75 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/VexDev/Bundle/BookstoreBundle/Resources/views/Default/index.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/VexDev/Bundle/BookstoreBundle/Resources/views/Book/book.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="42" selection-start="430" selection-end="430" vertical-scroll-proportion="0.18838304" vertical-offset="0" max-vertical-offset="637">
+        <state line="8" column="9" selection-start="159" selection-end="159" vertical-scroll-proportion="0.19138756" vertical-offset="0" max-vertical-offset="627">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/VexDev/Bundle/BookstoreBundle/Resources/views/layout.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/VexDev/Bundle/BookstoreBundle/Resources/views/Default/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="79" selection-start="4133" selection-end="4133" vertical-scroll-proportion="0.51805335" vertical-offset="1080" max-vertical-offset="2100">
+        <state line="9" column="71" selection-start="486" selection-end="505" vertical-scroll-proportion="0.2198697" vertical-offset="0" max-vertical-offset="614">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/VexDev/Bundle/BookstoreBundle/Resources/views/layout_form.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1035">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bundles/vexbookstore/css/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="12" selection-start="131" selection-end="131" vertical-scroll-proportion="0.22255193" vertical-offset="0" max-vertical-offset="674">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/VexDev/Bundle/BookstoreBundle/Entity/Book.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="7" selection-start="1131" selection-end="1131" vertical-scroll-proportion="0.115384616" vertical-offset="855" max-vertical-offset="5235">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/VexDev/Bundle/BookstoreBundle/Resources/views/Book/list.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="48" selection-start="788" selection-end="788" vertical-scroll-proportion="0.51805335" vertical-offset="0" max-vertical-offset="637">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/VexDev/Bundle/BookstoreBundle/Resources/views/Book/search.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="43" selection-start="784" selection-end="800" vertical-scroll-proportion="0.51805335" vertical-offset="0" max-vertical-offset="637">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/VexDev/Bundle/BookstoreBundle/Controller/BooksController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="54" selection-start="1650" selection-end="1650" vertical-scroll-proportion="-22.791666" vertical-offset="143" max-vertical-offset="825">
+        <state line="64" column="65" selection-start="2514" selection-end="2514" vertical-scroll-proportion="0.83516484" vertical-offset="428" max-vertical-offset="1095">
           <folding>
             <element signature="e#60#100#0" expanded="true" />
-            <marker date="1382989693000" expanded="true" signature="1214:1352" placeholder="SELECT *, MA..book..." />
+            <marker date="1383003789000" expanded="true" signature="-1:-1" placeholder="SELECT *, MA..book..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/VexDev/Bundle/BookstoreBundle/Resources/views/Book/search.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/VexDev/Bundle/BookstoreBundle/Controller/DefaultController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="49" selection-start="670" selection-end="670" vertical-scroll-proportion="0.4846154" vertical-offset="0" max-vertical-offset="650">
+        <state line="18" column="48" selection-start="623" selection-end="623" vertical-scroll-proportion="0.36923078" vertical-offset="0" max-vertical-offset="650">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/VexDev/Bundle/BookstoreBundle/Resources/views/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="91" column="116" selection-start="3998" selection-end="3998" vertical-scroll-proportion="0.42386186" vertical-offset="1095" max-vertical-offset="2010">
           <folding />
         </state>
       </provider>

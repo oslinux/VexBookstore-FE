@@ -3,7 +3,7 @@
 {% block content %}
 
     <div class="page-header">
-        <h1>Books <small>Results for "{{ search }}"</small></h1>
+        <h1>Books <small>Found {{ books|length }} results for "{{ search }}"</small></h1>
     </div>
 
     <div>
@@ -11,6 +11,7 @@
             <table class="table search">
                 <thead>
                 <tr>
+                    <th>Image</th>
                     <th>Name</th>
                     <th>Description</th>
                 </tr>
@@ -18,7 +19,8 @@
                 <tbody>
                 {% for book in books %}
                     <tr itemscope itemtype="http://schema.org/Book">
-                        <td itemprop="name">{{ book.name }}</td>
+                        <td><a href="{{ path('book', { 'isbn': book.isbn }) }}"><img src="" itemprop="image" alt="Book Picture." /></a></td>
+                        <td itemprop="name"><a href="{{ path('book', { 'isbn': book.isbn }) }}">{{ book.name }}</a></td>
                         <td itemprop="description">{{ book.description }}</td>
                     </tr>
                 {% endfor %}

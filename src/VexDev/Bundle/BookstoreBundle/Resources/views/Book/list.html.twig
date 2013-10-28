@@ -10,15 +10,17 @@
         <table class="table">
             <thead>
             <tr>
+                <th>ISBN</th>
                 <th>Name</th>
                 <th>Description</th>
             </tr>
             </thead>
             <tbody>
             {% for book in books %}
-                <tr>
-                    <td>{{ book.name }}</td>
-                    <td>{{ book.description }}</td>
+                <tr itemscope itemtype="http://schema.org/Book">
+                    <td><a itemprop="isbn" href="{{ path('book', { 'isbn': book.isbn }) }}">{{ book.isbn }}</a></td>
+                    <td><a itemprop="name" href="{{ path('book', { 'isbn': book.isbn }) }}">{{ book.name }}</a></td>
+                    <td><a itemprop="description" href="{{ path('book', { 'isbn': book.isbn }) }}">{{ book.description }}</a></td>
                 </tr>
             {% endfor %}
             </tbody>

@@ -9,11 +9,13 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/")
+     * @Route("/", name="index")
      * @Template("VexBookstoreBundle:Default:index.html.twig")
      */
     public function indexAction()
     {
-        return array('name' => 'test');
+        $repository = $this->getDoctrine()->getRepository('VexBookstoreBundle:Category');
+        $categories = $repository->findAll();
+        return array('categories' => $categories);
     }
 }
