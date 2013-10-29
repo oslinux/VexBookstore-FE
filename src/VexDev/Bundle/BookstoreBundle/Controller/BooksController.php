@@ -29,6 +29,28 @@ class BooksController extends Controller
     }
 
     /**
+     * @Route("/category/{cid}", name="category")
+     * @Template("VexBookstoreBundle:Book:category.html.twig")
+     */
+    public function category($cid)
+    {
+        $repository = $this->getDoctrine()->getRepository('VexBookstoreBundle:Category');
+        $category = $repository->find($cid);
+
+        $query = $this->getDoctrine()->getManager()->createQuery('
+            SELECT b FROM VexBookstoreBundle:Book b
+            JOIN b.cid c
+            WHERE c.cid = :cid')
+            ->setParameter('cid', $cid);
+        $books = $query->getResult();
+
+        $repository = $this->getDoctrine()->getRepository('VexBookstoreBundle:Category');
+        $categories = $repository->findAll();
+
+        return array('books' => $books, 'categories' => $categories, 'category' => $category);
+    }
+
+    /**
      * @Route("/search", name="search", defaults={"q" = ""})
      * @Method("GET")
      * @Template("VexBookstoreBundle:Book:search.html.twig")

@@ -6,6 +6,27 @@
         <h1>{{ book.name }}</h1>
     </div>
 
-    <div>
+    <div class="panel panel-default book">
+
+        <div class="panel-heading">
+            <h3 class="panel-title">
+                {{ book.name }}
+                <span class="download">
+                    <a href="{{ book.url }}">Download book <span class="glyphicon glyphicon-download"></span></a>
+                </span>
+            </h3>
+        </div>
+        <div class="panel-body">
+            <img class="thumbnail" src="{{ book.imgurl }}" alt="Book Picture" />
+            <span class="description">{{ book.description }}</span>
+
+            <div class="info">
+                <div class="price">{{ book.price }} <strong>BTC</strong></div>
+                <div class="pages">{{ book.pages }} pages.</div>
+                <div class="edition">Edition: {{ book.edition }}</div>
+            </div>
+        </div>
+
     </div>
+
 {% endblock %}

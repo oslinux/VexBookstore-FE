@@ -3,7 +3,7 @@
 {% block content %}
 
     <div class="page-header">
-        <h1>Books <small>Complete listing</small></h1>
+        <h1>Books <small>{% block catname %}Complete listing{% endblock %}</small></h1>
     </div>
 
     <div>
@@ -20,7 +20,7 @@
                 <tr itemscope itemtype="http://schema.org/Book">
                     <td><a itemprop="isbn" href="{{ path('book', { 'isbn': book.isbn }) }}">{{ book.isbn }}</a></td>
                     <td><a itemprop="name" href="{{ path('book', { 'isbn': book.isbn }) }}">{{ book.name }}</a></td>
-                    <td><a itemprop="description" href="{{ path('book', { 'isbn': book.isbn }) }}">{{ book.description }}</a></td>
+                    <td>{{ book.description[:100] ~ '...' }}</td>
                 </tr>
             {% endfor %}
             </tbody>

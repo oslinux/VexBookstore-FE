@@ -23,6 +23,11 @@ VexDev\Bundle\BookstoreBundle\Entity\Book:
             length: 255
             fixed: false
             nullable: true
+        imgurl:
+            type: string
+            length: 255
+            fixed: false
+            nullable: true
         price:
             type: decimal
             nullable: true

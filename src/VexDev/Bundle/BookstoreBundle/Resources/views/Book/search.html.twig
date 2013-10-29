@@ -19,9 +19,9 @@
                 <tbody>
                 {% for book in books %}
                     <tr itemscope itemtype="http://schema.org/Book">
-                        <td><a href="{{ path('book', { 'isbn': book.isbn }) }}"><img src="" itemprop="image" alt="Book Picture." /></a></td>
+                        <td><a href="{{ path('book', { 'isbn': book.isbn }) }}"><img src="{{ book.imgurl }}" itemprop="image" alt="Book Picture." /></a></td>
                         <td itemprop="name"><a href="{{ path('book', { 'isbn': book.isbn }) }}">{{ book.name }}</a></td>
-                        <td itemprop="description">{{ book.description }}</td>
+                        <td itemprop="description">{{ book.description[:300] ~ '...' }}</td>
                     </tr>
                 {% endfor %}
                 </tbody>

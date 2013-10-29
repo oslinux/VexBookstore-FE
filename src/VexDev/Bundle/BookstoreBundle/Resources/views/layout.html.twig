@@ -89,7 +89,7 @@
                     <ul class="nav nav-pills nav-stacked" itemprop="breadcrumb">
                         <li class="active"><a href="#">Categories</a></li>
                         {% for category in categories %}
-                            <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span> {{ category.name }}</a></li>
+                            <li><a href="{{ path('category', { 'cid': category.cid }) }}"><span class="glyphicon glyphicon-chevron-right"></span> {{ category.name }}</a></li>
                         {% endfor %}
                     </ul>
                 </div>
@@ -104,6 +104,7 @@
 
     <footer class="panel panel-default">
         <div class="panel-body">
+            please note: if you want to buy our books call: 899.899.998 (max fare: 99,99€/sec)<br />
             Would you prefer the backend, maybe? <a href="/admin">Administration</a>
         </div>
         <div class="panel-footer">

@@ -43,6 +43,13 @@ class Book
     private $url;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="imgurl", type="string", length=255, nullable=true)
+     */
+    private $imgurl;
+
+    /**
      * @var float
      *
      * @ORM\Column(name="price", type="decimal", nullable=true)
@@ -167,11 +174,34 @@ class Book
     /**
      * Get url
      *
-     * @return string 
+     * @return string
      */
     public function getUrl()
     {
         return $this->url;
+    }
+
+    /**
+     * Get imgurl
+     *
+     * @return string
+     */
+    public function getImgurl()
+    {
+        return $this->imgurl;
+    }
+
+    /**
+     * Set imgurl
+     *
+     * @param string $imgurl
+     * @return Book
+     */
+    public function setImgurl($imgurl)
+    {
+        $this->imgurl = $imgurl;
+
+        return $this;
     }
 
     /**
