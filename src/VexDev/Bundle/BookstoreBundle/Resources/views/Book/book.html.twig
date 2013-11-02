@@ -24,6 +24,10 @@
                 <div class="price">{{ book.price }} <strong>BTC</strong></div>
                 <div class="pages">{{ book.pages }} pages.</div>
                 <div class="edition">Edition: {{ book.edition }}</div>
+                <strong>Authors:</strong><br />
+                {% for author in authors %}
+                    {{ author.name }} {{ author.surname }}<br />
+                {% endfor %}
             </div>
         </div>
 
