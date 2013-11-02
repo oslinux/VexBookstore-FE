@@ -84,8 +84,12 @@ class BooksController extends Controller
         $book = $repository->find($isbn);
         $repository = $this->getDoctrine()->getRepository('VexBookstoreBundle:Category');
         $categories = $repository->findAll();
-        $repository = $this->getDoctrine()->getRepository('VexBookstoreBundle:Author');
-        $authors = $repository->findAll();
+        $query = $this->getDoctrine()->getManager()->createQuery('
+            SELECT a FROM VexBookstoreBundle:Author a
+            JOIN a.isbn b
+            WHERE b.isbn = :isbn')
+            ->setParameter('isbn', $isbn);
+        $authors = $query->getResult();
         return array('book' => $book, 'categories' => $categories, 'authors' => $authors);
     }
 }
