@@ -1,0 +1,32 @@
+footer {
+    text-align: center;
+}
+
+.navbar-form .form-control {
+    width: 10em;
+}
+
+.search td img {
+    height: 7em;
+    width: 7em;
+}
+
+.book .download {
+    float: right;
+}
+.book .thumbnail {
+    float: left;
+    margin: 1em;
+    height: 14em;
+    width: 14em;
+}
+.book .description {
+    display: block;
+}
+.book .info {
+    float: right;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    padding: 5px;
+    width: 12em;
+}
